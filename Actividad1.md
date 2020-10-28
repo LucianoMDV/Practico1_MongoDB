@@ -1,4 +1,3 @@
-# Practico1_MongoDB
 # Actividad 1
 1. Veo que estoy conectado y que BD hay.
 > show dbs
@@ -69,7 +68,7 @@ WriteResult({ "nInserted" : 1 })
   ]
 }
 >
-7) Listar todos los documentos de la collection players.
+7. Listar todos los documentos de la collection players.
 > db.players.find()
 { "_id" : ObjectId("5f7f5d28a01cfdca9d5664bb"), "nombre" : "Luciano", "apellido" : "D'Agata", "posición" : "delantero", "fechaNacimiento" : "08/10/1991" }
 { "_id" : ObjectId("5f7f5de0a01cfdca9d5664bc"), "nombre" : "Manuel", "apellido" : "Rivas", "posición" : "defensor", "fechaNacimiento" : "28/06/1999" }
