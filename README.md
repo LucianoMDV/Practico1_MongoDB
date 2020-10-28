@@ -1,3 +1,3 @@
 [Actividad1](Actividad1.md)
-[Actividad1](Actividad2.md)
-[Actividad1](Actividad3.md)
+[Actividad2](Actividad2.md)
+[Actividad3](Actividad3.md)
