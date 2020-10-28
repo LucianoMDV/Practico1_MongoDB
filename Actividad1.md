@@ -1,19 +1,20 @@
 # Practico1_MongoDB
-1) Veo que estoy conectado y que BD hay.
+# Actividad 1
+1. Veo que estoy conectado y que BD hay.
 > show dbs
 admin   0.000GB
 config  0.000GB
 local   0.000GB
 
-2) Crear una nueva base de datos llamada futbolfifa.
+2. Crear una nueva base de datos llamada futbolfifa.
 > use futbolfifa
 switched to db futbolfifa
 
-3)Crear una nueva collection llamada players.
+3. Crear una nueva collection llamada players.
 > db.createCollection("players")
 { "ok" : 1 }
 
-4) Insertar 5 documentos en la collection players con datos básicos (nombre, apellido, posición, fecha de nacimiento, etc).
+4. Insertar 5 documentos en la collection players con datos básicos (nombre, apellido, posición, fecha de nacimiento, etc).
 > db.players.insert(
                     { "nombre" : "Luciano",
                       "apellido" : "D'Agata",
@@ -22,7 +23,7 @@ switched to db futbolfifa
                       })
 WriteResult({ "nInserted" : 1 })
 
-5) me fijo si lo cargo bien
+5. me fijo si lo cargo bien
 > db.players.find()
 { "_id" : ObjectId("5f7f5d28a01cfdca9d5664bb"), 
   "nombre" : "Luciano", 
@@ -30,7 +31,7 @@ WriteResult({ "nInserted" : 1 })
   "posición" : "delantero", 
   "fechaNacimiento" : "08/10/1991" }
   
-6) busque como insertar mas de uno registro a la vez
+6. busque como insertar mas de uno registro a la vez
 > db.players.insertMany(
 [
     {
