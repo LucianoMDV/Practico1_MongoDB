@@ -1,9 +1,9 @@
 # Actividad 1
 1. Veo que estoy conectado y que BD hay.
 > show dbs
-admin   0.000GB
-config  0.000GB
-local   0.000GB
+admin   0.000GB  
+config  0.000GB  
+local   0.000GB  
 
 2. Crear una nueva base de datos llamada futbolfifa.
 > use futbolfifa
