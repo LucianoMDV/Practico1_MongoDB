@@ -158,7 +158,26 @@ WriteResult({ "nInserted" : 1 })
 { "_id" : ObjectId("5f9a374fe4ebe0c5fb3e8c86"), "title" : "Harry Potter y la cámara secreta", "year" : 2002, "rating" : 4, "genre" : "Fantasía", "description" : "serie de Fantasía", "actors" : [ "Daniel Radcliffe", "Rupert Grint", "Emma Watson", "Toby Jones", "Kenneth Branagh" ], "country" : "EEUU", "income" : 3500000, "duration" : 161 }
 >
 ```
-5. Actualizar películas cambiando el genre “drama” por “bored”.
+12. Cambie la opcion porque justo no cargue una pelicula con genre "drama" pero cumple con el comando solicitado.
+> 5. Actualizar películas cambiando el genre “drama” por “bored”.
+```
+> db.movies.updateMany(
+ { genre: "animada" }, {
+     $set: {
+         genre: "bored"
+     }
+ }, { upsert: true })
+{ "acknowledged" : true, "matchedCount" : 2, "modifiedCount" : 2 }
+```
+13. Muestro de nuevo los cambios que se hicieron con el comando anterior
+```
+db.movies.find()
+{ "_id" : ObjectId("5f9b1d2caceaef14fe88c642"), "title" : "Toy Story", "year" : 1990, "rating" : 5, "genre" : "bored", "description" : "serie de animacion", "actors" : [ "Sheriff Woody", "Jessie", "Forky", "Buzz Lightyear", "Betty" ], "country" : "EEUU", "income" : 2000000, "duration" : 60, "highlighted" : true }
+{ "_id" : ObjectId("5f9b1d3daceaef14fe88c643"), "title" : "Toy Story 2", "year" : 1999, "rating" : 4.5, "genre" : "bored", "description" : "serie de animacion", "actors" : [ "Tom Hanks", "Tim Allen", "Joan Cusack", "Don Rickles" ], "country" : "EEUU", "income" : 3000000, "duration" : 92 }
+{ "_id" : ObjectId("5f9b1d9baceaef14fe88c644"), "title" : "Harry Potter y la piedra filosofal", "year" : 2001, "rating" : 5, "genre" : "Fantasía", "description" : "serie de Fantasía", "actors" : [ "Daniel Radcliffe", "Rupert Grint", "Emma Watson", "Robbie Coltrane", "Richard Harris", "Alan Rickman", "Maggie Smith" ], "country" : "EEUU", "income" : 5000000, "duration" : 152, "highlighted" : true }
+{ "_id" : ObjectId("5f9b1d9baceaef14fe88c645"), "title" : "Harry Potter y la cámara secreta", "year" : 2002, "rating" : 4, "genre" : "Fantasía", "description" : "serie de Fantasía", "actors" : [ "Daniel Radcliffe", "Rupert Grint", "Emma Watson", "Toby Jones", "Kenneth Branagh" ], "country" : "EEUU", "income" : 3500000, "duration" : 161 }
+>     
+```
 6. Borrar todas las películas que tengan más de 30 años.
 7. Buscar todas las películas argentinas.
 8. Buscar todas las películas de acción con un buen rating (ej. > 4.0)
