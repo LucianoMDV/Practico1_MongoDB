@@ -137,3 +137,24 @@ WriteResult({ "nInserted" : 1 })
 { "_id" : ObjectId("5f9a374fe4ebe0c5fb3e8c85"), "title" : "Harry Potter y la piedra filosofal", "year" : 2001, "rating" : 5, "genre" : "Fantasía", "description" : "serie de Fantasía", "actors" : [ "Daniel Radcliffe", "Rupert Grint", "Emma Watson", "Robbie Coltrane", "Richard Harris", "Alan Rickman", "Maggie Smith" ], "country" : "EEUU", "income" : 5000000, "duration" : 152 }
 { "_id" : ObjectId("5f9a374fe4ebe0c5fb3e8c86"), "title" : "Harry Potter y la cámara secreta", "year" : 2002, "rating" : 4, "genre" : "Fantasía", "description" : "serie de Fantasía", "actors" : [ "Daniel Radcliffe", "Rupert Grint", "Emma Watson", "Toby Jones", "Kenneth Branagh" ], "country" : "EEUU", "income" : 3500000, "duration" : 161 }
 ```
+10. 
+```
+> db.movies.updateMany(
+ {},
+     {
+         $set: {
+             highlighted: true
+         }
+     },
+ { upsert: true })
+{ "acknowledged" : true, "matchedCount" : 4, "modifiedCount" : 4 }
+```
+11. muestro de nuevo si hya cambios con la consulta anterior
+```
+> db.movies.find()
+{ "_id" : ObjectId("5f9a14d7e4ebe0c5fb3e8c83"), "title" : "Toy Story", "year" : 1990, "rating" : 5, "genre" : "animada", "description" : "serie de animacion", "actors" : [ "Sheriff Woody", "Jessie", "Forky", "Buzz Lightyear", "Betty" ], "country" : "EEUU", "income" : 2000000, "duration" : 60, "highlighted" : true }
+{ "_id" : ObjectId("5f9a1e4be4ebe0c5fb3e8c84"), "title" : "Toy Story 2", "year" : 1999, "rating" : 4.5, "genre" : "animada", "description" : "serie de animacion", "actors" : [ "Tom Hanks", "Tim Allen", "Joan Cusack", "Don Rickles" ], "country" : "EEUU", "income" : 3000000, "duration" : 92, "highlighted" : true }
+{ "_id" : ObjectId("5f9a374fe4ebe0c5fb3e8c85"), "title" : "Harry Potter y la piedra filosofal", "year" : 2001, "rating" : 5, "genre" : "Fantasía", "description" : "serie de Fantasía", "actors" : [ "Daniel Radcliffe", "Rupert Grint", "Emma Watson", "Robbie Coltrane", "Richard Harris", "Alan Rickman", "Maggie Smith" ], "country" : "EEUU", "income" : 5000000, "duration" : 152, "highlighted" : true }
+{ "_id" : ObjectId("5f9a374fe4ebe0c5fb3e8c86"), "title" : "Harry Potter y la cámara secreta", "year" : 2002, "rating" : 4, "genre" : "Fantasía", "description" : "serie de Fantasía", "actors" : [ "Daniel Radcliffe", "Rupert Grint", "Emma Watson", "Toby Jones", "Kenneth Branagh" ], "country" : "EEUU", "income" : 3500000, "duration" : 161, "highlighted" : true }
+>
+```
