@@ -16,20 +16,22 @@ MongoDB server version: 4.4.1
 5. genero la tabla con el comando "db.createCollection("movies")"
 > { "ok" : 1 }
 6. cargo el primer registros con el comando db.movies.insert()  
-db.movies.insert({  
-            title : "Toy Story",  
-            year : 1990,  
-            rating : 5.0,  
-            genre : "animada",  
-            description: "serie de animacion",  
-            actors : [  
-                "Sheriff Woody",  
-                "Jessie", "Forky",  
-                "Buzz Lightyear",  
-                "Betty"  
-            ],  
-            country : "EEUU",  
-            income : 2000000,  
-            duration : 60  
-})  
+> db.movies.insert({  
+             title : "Toy Story",  
+             year : 1990,  
+             rating : 5.0,  
+             genre : "animada",  
+             description: "serie de animacion",  
+             actors : [  
+                 "Sheriff Woody",  
+                 "Jessie", "Forky",  
+                 "Buzz Lightyear",  
+                 "Betty"  
+             ],  
+             country : "EEUU",  
+             income : 2000000,  
+             duration : 60  
+ })  
+WriteResult({ "nInserted" : 1 })  
 7.
+
