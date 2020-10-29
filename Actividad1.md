@@ -30,8 +30,9 @@ WriteResult({ "nInserted" : 1 })
   "posición" : "delantero",  
   "fechaNacimiento" : "08/10/1991" }  
   
-6. busque como insertar mas de uno registro a la vez  
-> db.players.insertMany(  
+6. busque como insertar mas de uno registro a la vez 
+```
+db.players.insertMany(  
 [  
     {  
         "nombre" : "Manuel",  
@@ -67,6 +68,7 @@ WriteResult({ "nInserted" : 1 })
           ObjectId("5f7f5de0a01cfdca9d5664bf")  
   ]  
 }  
+```
 7. Listar todos los documentos de la collection players.  
 > db.players.find()  
 { "_id" : ObjectId("5f7f5d28a01cfdca9d5664bb"), "nombre" : "Luciano", "apellido" : "D'Agata", "posición" : "delantero", "fechaNacimiento" : "08/10/1991" }  
