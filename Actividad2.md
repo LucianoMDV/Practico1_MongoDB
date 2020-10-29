@@ -217,6 +217,17 @@ WriteResult({ "nInserted" : 1 })
 ```
 18. Hice unos cambios en la consulta pero cumple con los requisitos de hacer una consulta de 3 if
 > 8. Buscar todas las películas de acción con un buen rating (ej. > 4.0) que hayan salido los últimos 2 años.
+### una manera explicita con $and
+```
+db.movies.find({
+    $and: [
+        { genre: "Fantasía" },
+        { rating: { $gt: 4.0 } },
+        { year: { $gte: 2020 - 19 } }
+    ]
+})
+```
+### otra manera implicita sin el $and
 ```
 > db.movies.find(
      {
