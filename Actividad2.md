@@ -169,14 +169,14 @@ WriteResult({ "nInserted" : 1 })
  }, { upsert: true })
 { "acknowledged" : true, "matchedCount" : 2, "modifiedCount" : 2 }
 ```
-13. Muestro de nuevo los cambios que se hicieron con el comando anterior
+13. Muestro de nuevo los cambios que se hicieron con el comando anterior sacando los id por que solo molestan para ver los datos que cambiaron
 ```
-db.movies.find()
-{ "_id" : ObjectId("5f9b1d2caceaef14fe88c642"), "title" : "Toy Story", "year" : 1990, "rating" : 5, "genre" : "bored", "description" : "serie de animacion", "actors" : [ "Sheriff Woody", "Jessie", "Forky", "Buzz Lightyear", "Betty" ], "country" : "EEUU", "income" : 2000000, "duration" : 60, "highlighted" : true }
-{ "_id" : ObjectId("5f9b1d3daceaef14fe88c643"), "title" : "Toy Story 2", "year" : 1999, "rating" : 4.5, "genre" : "bored", "description" : "serie de animacion", "actors" : [ "Tom Hanks", "Tim Allen", "Joan Cusack", "Don Rickles" ], "country" : "EEUU", "income" : 3000000, "duration" : 92 }
-{ "_id" : ObjectId("5f9b1d9baceaef14fe88c644"), "title" : "Harry Potter y la piedra filosofal", "year" : 2001, "rating" : 5, "genre" : "Fantasía", "description" : "serie de Fantasía", "actors" : [ "Daniel Radcliffe", "Rupert Grint", "Emma Watson", "Robbie Coltrane", "Richard Harris", "Alan Rickman", "Maggie Smith" ], "country" : "EEUU", "income" : 5000000, "duration" : 152, "highlighted" : true }
-{ "_id" : ObjectId("5f9b1d9baceaef14fe88c645"), "title" : "Harry Potter y la cámara secreta", "year" : 2002, "rating" : 4, "genre" : "Fantasía", "description" : "serie de Fantasía", "actors" : [ "Daniel Radcliffe", "Rupert Grint", "Emma Watson", "Toby Jones", "Kenneth Branagh" ], "country" : "EEUU", "income" : 3500000, "duration" : 161 }
->     
+> db.movies.find({},{_id: 0})
+{ "title" : "Toy Story", "year" : 1990, "rating" : 5, "genre" : "bored", "description" : "serie de animacion", "actors" : [ "Sheriff Woody", "Jessie", "Forky", "Buzz Lightyear", "Betty" ], "country" : "EEUU", "income" : 2000000, "duration" : 60, "highlighted" : true }
+{ "title" : "Toy Story 2", "year" : 1999, "rating" : 4.5, "genre" : "bored", "description" : "serie de animacion", "actors" : [ "Tom Hanks", "Tim Allen", "Joan Cusack", "Don Rickles" ], "country" : "EEUU", "income" : 3000000, "duration" : 92 }
+{ "title" : "Harry Potter y la piedra filosofal", "year" : 2001, "rating" : 5, "genre" : "Fantasía", "description" : "serie de Fantasía", "actors" : [ "Daniel Radcliffe", "Rupert Grint", "Emma Watson", "Robbie Coltrane", "Richard Harris", "Alan Rickman", "Maggie Smith" ], "country" : "EEUU", "income" : 5000000, "duration" : 152, "highlighted" : true }
+{ "title" : "Harry Potter y la cámara secreta", "year" : 2002, "rating" : 4, "genre" : "Fantasía", "description" : "serie de Fantasía", "actors" : [ "Daniel Radcliffe", "Rupert Grint", "Emma Watson", "Toby Jones", "Kenneth Branagh" ], "country" : "EEUU", "income" : 3500000, "duration" : 161 }
+>  
 ```
 6. Borrar todas las películas que tengan más de 30 años.
 7. Buscar todas las películas argentinas.
