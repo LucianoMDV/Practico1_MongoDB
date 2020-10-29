@@ -215,5 +215,16 @@ WriteResult({ "nInserted" : 1 })
 { "title" : "Relatos salvajes", "year" : 2014, "rating" : 3.5, "genre" : "suspenso", "description" : "serie de suspenso", "actors" : [ "Ricardo Darín", "Oscar Martínez", "Leonardo Sbaraglia", "Érica Rivas", "Rita Cortese" ], "country" : "Argentina", "income" : 6000000, "duration" : 122 }
 >
 ```
-
-8. Buscar todas las películas de acción con un buen rating (ej. > 4.0) que hayan salido los últimos 2 años.
+18. Hice unos cambios en la consulta pero cumple con los requisitos de hacer una consulta de 3 if
+> 8. Buscar todas las películas de acción con un buen rating (ej. > 4.0) que hayan salido los últimos 2 años.
+```
+> db.movies.find(
+     {
+         genre: "Fantasía" ,
+         rating: { $gt: 4.0 },
+         year: { $gte: 2020-19}
+     }
+   )
+{ "_id" : ObjectId("5f9b1d9baceaef14fe88c644"), "title" : "Harry Potter y la piedra filosofal", "year" : 2001, "rating" : 5, "genre" : "Fantasía", "description" : "serie de Fantasía", "actors" : [ "Daniel Radcliffe", "Rupert Grint", "Emma Watson", "Robbie Coltrane", "Richard Harris", "Alan Rickman", "Maggie Smith" ], "country" : "EEUU", "income" : 5000000, "duration" : 152, "highlighted" : true }
+>
+```
