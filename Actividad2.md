@@ -14,7 +14,10 @@ MongoDB server version: 4.4.1
 4. creo una nueva BD con el comando "use Netflix"
 > switched to db Netflix
 5. genero la tabla con el comando "db.createCollection("movies")"
-> { "ok" : 1 }
+> { "ok" : 1 }  
+6. me fijo si esta la tabla con el comando "show collections"
+> show collections  
+movies  
 6. cargo el primer registros con el comando db.movies.insert()  
 > db.movies.insert({  
              title : "Toy Story",  
