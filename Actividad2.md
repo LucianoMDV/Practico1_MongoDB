@@ -79,4 +79,53 @@ WriteResult({ "nInserted" : 1 })
         "insertedId" : ObjectId("5f9a1e4be4ebe0c5fb3e8c84")
 }
 ```
-
+8.
+```
+> db.movies.insertMany(
+     [
+         {
+             title : "Harry Potter y la piedra filosofal",
+             year : 2001,
+             rating : 5.0,
+             genre : "Fantasía",
+             description: "serie de Fantasía",
+             actors : [
+                 "Daniel Radcliffe",
+                 "Rupert Grint",
+                 "Emma Watson",
+                 "Robbie Coltrane",
+                 "Richard Harris",
+                 "Alan Rickman",
+                 "Maggie Smith"
+             ],
+             country : "EEUU",
+             income : 5000000,
+             duration : 152
+         },
+         {
+             title : "Harry Potter y la cámara secreta",
+             year : 2002,
+             rating : 4.0,
+             genre : "Fantasía",
+             description: "serie de Fantasía",
+             actors : [
+                 "Daniel Radcliffe",
+                 "Rupert Grint",
+                 "Emma Watson",
+                 "Toby Jones",
+                 "Kenneth Branagh"
+             ],
+             country : "EEUU",
+             income : 3500000,
+             duration : 161
+         },
+     ]
+ )
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("5f9a374fe4ebe0c5fb3e8c85"),
+                ObjectId("5f9a374fe4ebe0c5fb3e8c86")
+        ]
+}
+```
