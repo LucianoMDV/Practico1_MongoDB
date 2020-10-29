@@ -179,7 +179,7 @@ WriteResult({ "nInserted" : 1 })
 >  
 ```
 14. Cambio un poco la condicion para que coincida con los datos que tengo cargados pero cumple igual con la condicion.
-6. Borrar todas las películas que tengan más de 30 años.
+> 6. Borrar todas las películas que tengan más de 30 años.
 ```
 > db.movies.deleteMany({year: {$lt: 2020 - 28 }})
 { "acknowledged" : true, "deletedCount" : 1 }
@@ -193,6 +193,27 @@ WriteResult({ "nInserted" : 1 })
 { "title" : "Harry Potter y la cámara secreta", "year" : 2002, "rating" : 4, "genre" : "Fantasía", "description" : "serie de Fantasía", "actors" : [ "Daniel Radcliffe", "Rupert Grint", "Emma Watson", "Toby Jones", "Kenneth Branagh" ], "country" : "EEUU", "income" : 3500000, "duration" : 161 }
 >
 ```
-7. Buscar todas las películas argentinas.
-8. Buscar todas las películas de acción con un buen rating (ej. > 4.0)
-que hayan salido los últimos 2 años.
+16. agrego una pelicula mas "Argentina" para mostrar que funciona la siguiente consulta.
+```
+> db.movies.insert({
+     title: "Relatos salvajes",
+     year: 2014,
+     rating: 3.5,
+     genre: "suspenso",
+     description: "serie de suspenso",
+     actors: ["Ricardo Darín", "Oscar Martínez", "Leonardo Sbaraglia", "Érica Rivas", "Rita Cortese"],
+     country: "Argentina",
+     income: 6000000,
+     duration: 122
+ })
+WriteResult({ "nInserted" : 1 })
+```
+17. hago la consulta que pide el punto 7
+> 7. Buscar todas las películas argentinas.
+```
+> db.movies.find({country: "Argentina"}, {_id: 0})
+{ "title" : "Relatos salvajes", "year" : 2014, "rating" : 3.5, "genre" : "suspenso", "description" : "serie de suspenso", "actors" : [ "Ricardo Darín", "Oscar Martínez", "Leonardo Sbaraglia", "Érica Rivas", "Rita Cortese" ], "country" : "Argentina", "income" : 6000000, "duration" : 122 }
+>
+```
+
+8. Buscar todas las películas de acción con un buen rating (ej. > 4.0) que hayan salido los últimos 2 años.
