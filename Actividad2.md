@@ -19,7 +19,8 @@ MongoDB server version: 4.4.1
 > show collections  
 movies  
 6. cargo el primer registros con el comando db.movies.insert()  
-> db.movies.insert({  
+```
+db.movies.insert({  
              title : "Toy Story",  
              year : 1990,  
              rating : 5.0,  
@@ -35,6 +36,7 @@ movies
              income : 2000000,  
              duration : 60  
  })  
+```
 WriteResult({ "nInserted" : 1 })  
 7.
 
