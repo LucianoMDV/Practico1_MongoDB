@@ -32,7 +32,7 @@ local       0.000GB
 ```
 movies
 ```
-6. cargo el primer registros con el comando db.movies.insert()  
+6. cargo el primer registro con el comando db.movies.insert()  
 ```
 db.movies.insert({  
              title : "Toy Story",  
@@ -53,5 +53,30 @@ db.movies.insert({
 WriteResult({ "nInserted" : 1 })
 ```
 
-7.
+7. cargo el siguiente registro con el comando db.movies.insertOne()
+
+```
+> db.movies.insertOne(
+     {
+         title : "Toy Story 2",
+         year : 1999,
+         rating : 4.5,
+         genre : "animada",
+         description: "serie de animacion",
+         actors : [
+             "Tom Hanks",
+             "Tim Allen",
+             "Joan Cusack",
+             "Don Rickles"
+         ],
+         country : "EEUU",
+         income : 3000000,
+         duration : 92
+     }
+ )
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("5f9a1e4be4ebe0c5fb3e8c84")
+}
+```
 
