@@ -37,8 +37,9 @@ db.movies.insert({
              country : "EEUU",  
              income : 2000000,  
              duration : 60  
- })  
+ })
+WriteResult({ "nInserted" : 1 })
 ```
-WriteResult({ "nInserted" : 1 })  
+
 7.
 
