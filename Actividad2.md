@@ -158,3 +158,8 @@ WriteResult({ "nInserted" : 1 })
 { "_id" : ObjectId("5f9a374fe4ebe0c5fb3e8c86"), "title" : "Harry Potter y la cámara secreta", "year" : 2002, "rating" : 4, "genre" : "Fantasía", "description" : "serie de Fantasía", "actors" : [ "Daniel Radcliffe", "Rupert Grint", "Emma Watson", "Toby Jones", "Kenneth Branagh" ], "country" : "EEUU", "income" : 3500000, "duration" : 161 }
 >
 ```
+5. Actualizar películas cambiando el genre “drama” por “bored”.
+6. Borrar todas las películas que tengan más de 30 años.
+7. Buscar todas las películas argentinas.
+8. Buscar todas las películas de acción con un buen rating (ej. > 4.0)
+que hayan salido los últimos 2 años.
