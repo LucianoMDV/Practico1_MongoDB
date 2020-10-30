@@ -71,7 +71,7 @@ re muestro el resultado de una manera mas practica de ver lo mismo y comparar qu
 { "income" : 3000000 }
 >
 ```
-6. Repetir query 3 y 4 pero retornando sólo el título y genre.  
+6. Repetir query 3 y 4 pero retornando sólo el título y genre.
 Es la re consulta del punto 3 con menos datos
 ```
 > db.movies.find({country: "Hollywood"}, {_id:0, title: 1, genre: 1}).limit(5)
@@ -93,4 +93,9 @@ Es la re consulta del punto 4 con menos datos
 >
 ```
 7. Mostrar los distintos países que existen en la base de datos.
+```
+> db.movies.distinct("country")
+[ "Argentina", "EEUU", "Hollywood" ]
+>
+```
 
