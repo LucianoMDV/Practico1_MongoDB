@@ -72,6 +72,7 @@ re muestro el resultado de una manera mas practica de ver lo mismo y comparar qu
 >
 ```
 6. Repetir query 3 y 4 pero retornando sólo el título y genre.
+
 Es la re consulta del punto 3 con menos datos
 ```
 > db.movies.find({country: "Hollywood"}, {_id:0, title: 1, genre: 1}).limit(5)
