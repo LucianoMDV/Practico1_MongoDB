@@ -6,6 +6,7 @@
 ```
 3. Listar las 10 primeras películas de Hollywood.
 > db.movies.find({country: "Hollywood"}).limit(10)
+
  cambie la consulta para mostrar un ejemplo pero es lo mismo pero con menos cantidad de resultados y  no proyecte los id que son innecesarios para mostrar este ejemplo.
 ```
 > db.movies.find({country: "Hollywood"}, {_id:0}).limit(5)
