@@ -6,16 +6,14 @@
 ```
 3. Listar las 10 primeras películas de Hollywood.
 > db.movies.find({country: "Hollywood"}).limit(10)
- - cambie la consulta para mostrar un ejemplo pero es lo mismo pero con menos cantidad de resultados
+ cambie la consulta para mostrar un ejemplo pero es lo mismo pero con menos cantidad de resultados y  no proyecte los id que son innecesarios para mostrar este ejemplo.
 ```
-> db.movies.find({country: "Hollywood"}).limit(1)
-{ "_id" : ObjectId("5f9c3003aceaef14fe88c648"), "title" : "El irlandés", "year" : 2019, "rating" : 4, "genre" : "Gánsteres", "description" : "serie de Gánsteres", "actors" : [ "Robert De Niro", "Al Pacino", "Joe Pesci" ], "country" : "Hollywood", "income" : 8000000, "duration" : 209 }
-> db.movies.find({country: "Hollywood"}).limit(5)
-{ "_id" : ObjectId("5f9c3003aceaef14fe88c648"), "title" : "El irlandés", "year" : 2019, "rating" : 4, "genre" : "Gánsteres", "description" : "serie de Gánsteres", "actors" : [ "Robert De Niro", "Al Pacino", "Joe Pesci" ], "country" : "Hollywood", "income" : 8000000, "duration" : 209 }
-{ "_id" : ObjectId("5f9c3003aceaef14fe88c649"), "title" : "The Trial of the Chicago 7", "year" : 2020, "rating" : 4.5, "genre" : "Soundtrack", "description" : "serie de Soundtrack", "actors" : [ "Yahya Abdul-Mateen II", "Sacha Baron Cohen", "Daniel Flaherty", "Joseph Gordon-Levitt", "Michael Keaton" ], "country" : "Hollywood", "income" : 35000000, "duration" : 130 }
-{ "_id" : ObjectId("5f9c3142aceaef14fe88c64a"), "title" : "Focus", "year" : 2015, "rating" : 4.5, "genre" : "Comedia dramática", "description" : "serie de Comedia dramática", "actors" : [ "Will Smith", "Margot Robbie" ], "country" : "Hollywood", "income" : 50100000, "duration" : 104 }
-{ "_id" : ObjectId("5f9c33b8aceaef14fe88c64b"), "title" : "American Sniper", "year" : 2014, "rating" : 5, "genre" : "Drama", "description" : "serie de Drama", "actors" : [ "Bradley Cooper", "Sienna Miller" ], "country" : "Hollywood", "income" : 58800000, "duration" : 132 }
-{ "_id" : ObjectId("5f9c33b8aceaef14fe88c64c"), "title" : "The Lego Movie", "year" : 2014, "rating" : 3, "genre" : "Animación", "description" : "serie de Animación", "actors" : [ "Chris Pratt", "Elizabeth Banks", "Will Ferrell", "Will Arnett" ], "country" : "Hollywood", "income" : 60000000, "duration" : 100 }
+> db.movies.find({country: "Hollywood"}, {_id:0}).limit(5)
+{ "title" : "El irlandés", "year" : 2019, "rating" : 4, "genre" : "Gánsteres", "description" : "serie de Gánsteres", "actors" : [ "Robert De Niro", "Al Pacino", "Joe Pesci" ], "country" : "Hollywood", "income" : 8000000, "duration" : 209 }
+{ "title" : "The Trial of the Chicago 7", "year" : 2020, "rating" : 4.5, "genre" : "Soundtrack", "description" : "serie de Soundtrack", "actors" : [ "Yahya Abdul-Mateen II", "Sacha Baron Cohen", "Daniel Flaherty", "Joseph Gordon-Levitt", "Michael Keaton" ], "country" : "Hollywood", "income" : 35000000, "duration" : 130 }
+{ "title" : "Focus", "year" : 2015, "rating" : 4.5, "genre" : "Comedia dramática", "description" : "serie de Comedia dramática", "actors" : [ "Will Smith", "Margot Robbie" ], "country" : "Hollywood", "income" : 50100000, "duration" : 104 }
+{ "title" : "American Sniper", "year" : 2014, "rating" : 5, "genre" : "Drama", "description" : "serie de Drama", "actors" : [ "Bradley Cooper", "Sienna Miller" ], "country" : "Hollywood", "income" : 58800000, "duration" : 132 }
+{ "title" : "The Lego Movie", "year" : 2014, "rating" : 3, "genre" : "Animación", "description" : "serie de Animación", "actors" : [ "Chris Pratt", "Elizabeth Banks", "Will Ferrell", "Will Arnett" ], "country" : "Hollywood", "income" : 60000000, "duration" : 100 }
 >
 ```
 4. Listar las 5 películas más taquilleras.
