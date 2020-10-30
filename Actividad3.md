@@ -17,8 +17,40 @@
 { "title" : "The Lego Movie", "year" : 2014, "rating" : 3, "genre" : "Animación", "description" : "serie de Animación", "actors" : [ "Chris Pratt", "Elizabeth Banks", "Will Ferrell", "Will Arnett" ], "country" : "Hollywood", "income" : 60000000, "duration" : 100 }
 >
 ```
+ - muestro como esta cargada la tambla movies para corroborrar que si funciona las siguientes dos consultas
+```
+> db.movies.find({},{income: 1, _id:0}).sort({income: -1})
+{ "income" : 160000000 }
+{ "income" : 60000000 }
+{ "income" : 58800000 }
+{ "income" : 50100000 }
+{ "income" : 35000000 }
+{ "income" : 8000000 }
+{ "income" : 6000000 }
+{ "income" : 5000000 }
+{ "income" : 3500000 }
+{ "income" : 3000000 }
+>
+```
 4. Listar las 5 películas más taquilleras.
+```
+> db.movies.find({},{income: 1, _id:0}).sort({income: -1}).limit(5)
+{ "income" : 160000000 }
+{ "income" : 60000000 }
+{ "income" : 58800000 }
+{ "income" : 50100000 }
+{ "income" : 35000000 }
+```
 5. Listar el 2do conjunto de 5 películas más taquilleras.
+```
+> db.movies.find({},{income: 1, _id:0}).sort({income: -1}).skip(5).limit(5)
+{ "income" : 8000000 }
+{ "income" : 6000000 }
+{ "income" : 5000000 }
+{ "income" : 3500000 }
+{ "income" : 3000000 }
+>
+```
 6. Repetir query 3 y 4 pero retornando sólo el título y genre.
 7. Mostrar los distintos países que existen en la base de datos.
 
