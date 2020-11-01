@@ -216,7 +216,7 @@ BulkWriteResult({
         "upserted" : [ ]
 })
 ```
-2. Crear índice en field rating y luego hacer búsquedas usando este campo.
+> 2. Crear índice en field rating y luego hacer búsquedas usando este campo.
 
 ```
 > db.movies.createIndex({ rating: 1})
@@ -252,7 +252,7 @@ BulkWriteResult({
 { "rating" : 4.5 }
 Type "it" for more
 ```
-3. Crear índice en title y description, y después hacer búsquedas de texto en estos campos.
+> 3. Crear índice en title y description, y después hacer búsquedas de texto en estos campos.
 ```
 > db.movies.createIndex({title: "text", description: "text"})
 {
