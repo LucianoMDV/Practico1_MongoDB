@@ -228,3 +228,13 @@ BulkWriteResult({
 }
 ```
 3. Crear índice en title y description, y después hacer búsquedas de texto en estos campos.
+```
+> db.movies.createIndex({title: "text", description: "text"})
+{
+        "createdCollectionAutomatically" : false,
+        "numIndexesBefore" : 1,
+        "numIndexesAfter" : 3,
+        "ok" : 1
+}
+>
+```
