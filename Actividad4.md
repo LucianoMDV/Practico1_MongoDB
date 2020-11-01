@@ -227,6 +227,31 @@ BulkWriteResult({
         "ok" : 1
 }
 ```
+ - Un ejemplo de busqueda con respecto al campo rating:
+```
+> db.movies.find({rating: {$gte: 1} }, {_id:0, rating: 1})
+{ "rating" : 2 }
+{ "rating" : 2.5 }
+{ "rating" : 3 }
+{ "rating" : 3.3 }
+{ "rating" : 3.5 }
+{ "rating" : 3.5 }
+{ "rating" : 3.6 }
+{ "rating" : 3.8 }
+{ "rating" : 3.8 }
+{ "rating" : 4 }
+{ "rating" : 4 }
+{ "rating" : 4.2 }
+{ "rating" : 4.2 }
+{ "rating" : 4.3 }
+{ "rating" : 4.3 }
+{ "rating" : 4.4 }
+{ "rating" : 4.4 }
+{ "rating" : 4.5 }
+{ "rating" : 4.5 }
+{ "rating" : 4.5 }
+Type "it" for more
+```
 3. Crear índice en title y description, y después hacer búsquedas de texto en estos campos.
 ```
 > db.movies.createIndex({title: "text", description: "text"})
