@@ -2,6 +2,56 @@
 ```
 db.movies.insert([
     {
+        title: "Animales fantásticos: los crímenes de Grindelwald",
+        year: 2018,
+        rating: 2.0,
+        genre: "Gánsteres",
+        description: "Grindewald ha logrado escapar y pretende encabezar una revuelta de los magos purasangre para dominar el mundo. Dumbledore, acompañado por su antiguo estudiante Scamander, tratará de evitar que quien fuera su gran amigo cumpla su siniestro propósito.",
+        actors: ["Eddie Redmayne", "Johnny Depp", "Jude Law"],
+        country: "Hollywood",
+        income: 654900000,
+        duration: 209
+    }, {
+        title: "Angry Birds 2: la película",
+        year: 2019,
+        rating: 3.8,
+        genre: "Animación",
+        description: "Los amigos emplumados deben unirse a los cerdos verdes cuando las agresivas aves planean destruirlos a ambos.",
+        actors: ["Jason Sudeikis", "Josh Gad", "Peter Dinklage"],
+        country: "Hollywood",
+        income: 65000000,
+        duration: 97
+    }, {
+        title: "¿Quién @#*%$ es papá?",
+        year: 2017,
+        rating: 4.4,
+        genre: "Comedia",
+        description: "Dos hermanos mellizos crecieron pensando que su padre había muerto, pero descubren que está vivo y emprenden un viaje para encontrarlo. Pese al entusiasmo que ponen en localizarlo, no será sencillo, ya que su madre se acostó con muchos hombres poderosos y famosos en la década de 1970.",
+        actors: ["Ed Helms", "Owen Wilson", "Glenn Close"],
+        country: "EEUU",
+        income: 25600000,
+        duration: 125
+    }, {
+        title: "Batman: la máscara del fantasma",
+        year: 1993,
+        rating: 3.5,
+        genre: "Animación",
+        description: "La exnovia de Bruce Wayne es implicada en la misteriosa y letal campaña de un villano contra criminales.",
+        actors: ["Dana Delany", "Mark Hamill", "Kevin Conroy"],
+        country: "EEUU",
+        income: 1000000,
+        duration: 77
+    }, {
+        title: "Un jefe en pañales",
+        year: 2017,
+        rating: 4.3,
+        genre: "",
+        description: "Tim, de 7 años, tiene celos de su hermano, un bebé que viste traje y corbata, hasta que descubre que el bebé puede hablar. Los hermanos protagonizan una misión secreta contra un villano que pretende acabar con el amor de los niños por las mascotas.",
+        actors: ["David Soren", "Tobey <agiore", "James McGranth"],
+        country: "Argentina",
+        income: 2000000,
+        duration: 97
+    }, {
         title: "Furia de Dragones",
         year: 2007,
         rating: 2.5,
@@ -156,7 +206,7 @@ db.movies.insert([
 BulkWriteResult({
         "writeErrors" : [ ],
         "writeConcernErrors" : [ ],
-        "nInserted" : 15,
+        "nInserted" : 20,
         "nUpserted" : 0,
         "nMatched" : 0,
         "nModified" : 0,
