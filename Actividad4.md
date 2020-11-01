@@ -238,3 +238,16 @@ BulkWriteResult({
 }
 >
 ```
+ - Un ejemplo de busqueda:
+ ```
+ > db.movies.find({ $text: { $search: "juvenil" } })
+{ "_id" : ObjectId("5f9f1eb319d04033a0647021"), "title" : "Un juego vs. el destino", "year" : 2006, "rating" : 4.2, "genre" : "Drama", "description" : "En un centro de detención juvenil, un consejero decide transformar a los prisioneros a su cargo en un equipo de fútbol americano para enseñarles sobre el autoestima y la responsabilidad social, pero se enfrenta a la oposición de los entrenadores de las preparatorias que no quieren que sus jugadores se enfrenten a los criminales en el campo de juego.", "actors" : [ "Dwayne The Rock Johnson", "Xzibit", "L. Scott Caldwell", "Kevin Dunn" ], "country" : "EEUU", "income" : 74000000, "duration" : 126 }
+>
+ ```
+ - otro ejemplo de busqueda:
+ ```
+ > db.movies.find({ $text: { $search: "Harry Potter" } })
+{ "_id" : ObjectId("5f9b1d9baceaef14fe88c645"), "title" : "Harry Potter y la cámara secreta", "year" : 2002, "rating" : 4, "genre" : "Fantasía", "description" : "serie de Fantasía", "actors" : [ "Daniel Radcliffe", "Rupert Grint", "Emma Watson", "Toby Jones", "Kenneth Branagh" ], "country" : "EEUU", "income" : 3500000, "duration" : 161 }
+{ "_id" : ObjectId("5f9b1d9baceaef14fe88c644"), "title" : "Harry Potter y la piedra filosofal", "year" : 2001, "rating" : 5, "genre" : "Fantasía", "description" : "serie de Fantasía", "actors" : [ "Daniel Radcliffe", "Rupert Grint", "Emma Watson", "Robbie Coltrane", "Richard Harris", "Alan Rickman", "Maggie Smith" ], "country" : "EEUU", "income" : 5000000, "duration" : 152, "highlighted" : true }
+>
+ ```
