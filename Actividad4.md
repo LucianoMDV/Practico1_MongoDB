@@ -1,4 +1,6 @@
 #Actividad 4
+1. En base a la BD que ya tenia agrego 20 peliculas mas para llegar a completar la minima cantidad de 30 peliculas que pide el ejercicio.
+> 1. Utilizar la misma base de datos de películas e insertar varias películas (al menos 30) con distinto contenido.
 ```
 db.movies.insert([
     {
@@ -214,3 +216,5 @@ BulkWriteResult({
         "upserted" : [ ]
 })
 ```
+2. Crear índice en field rating y luego hacer búsquedas usando este campo.
+3. Crear índice en title y description, y después hacer búsquedas de texto en estos campos.
