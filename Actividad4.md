@@ -217,4 +217,14 @@ BulkWriteResult({
 })
 ```
 2. Crear índice en field rating y luego hacer búsquedas usando este campo.
+
+```
+> db.movies.createIndex({ rating: 1})
+{
+        "createdCollectionAutomatically" : false,
+        "numIndexesBefore" : 1,
+        "numIndexesAfter" : 2,
+        "ok" : 1
+}
+```
 3. Crear índice en title y description, y después hacer búsquedas de texto en estos campos.
